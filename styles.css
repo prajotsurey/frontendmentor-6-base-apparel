@@ -1,0 +1,254 @@
+html {
+  height: 100%;
+  font-size: clamp(0.875rem, calc(0.875rem + 0.15vw), 1.3rem);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-attachment: fixed;
+  color: hsl(0, 36%, 70%);
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  color: hsl(0, 6%, 24%);
+  letter-spacing: 0.5rem;
+  line-height: 1.1;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  max-width: 12ch;
+}
+
+.thin-heading {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+.hidden {
+  clip-path: polygon(1px 1px, 1px 1px, 1px 1px, 1px 1px);
+  display: block;
+  height: 1px;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+  position: absolute;
+  width: 1px;
+}
+
+form {
+  position: relative;
+}
+
+.input-container {
+  position: relative;
+}
+
+input[type="email"] {
+  background: transparent;
+  border: 1px solid hsl(0, 36%, 70%);
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: hsl(0, 6%, 24%);
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  padding: 1rem 7.5rem 1rem 1.5rem;
+  position: relative;
+  width: 100%;
+}
+
+input[type="email"]:focus-visible {
+  outline: none;
+}
+
+input[type="email"]::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+
+input[type="email"]:invalid {
+  border: 1px solid hsl(0, 36%, 70%);
+  outline: none;
+}
+
+input[type="email"].invalid-input {
+  border: 1px solid hsl(0, 93%, 68%);
+  outline: 1px solid hsl(0, 93%, 68%);
+}
+
+input[type="email"] + .overlay-button {
+  border-radius: 999px;
+  border: none;
+  height: 100%;
+  padding: 0rem 1.75rem;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.input-error-icon {
+  position: absolute;
+  right: 5.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.overlay-button {
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+  background-position: 100% 100%;
+  background-size: 200% 200%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transition: all 150ms ease;
+  box-shadow: 0px 12px 21px -6px hsl(0, 67%, 86%);
+}
+
+.overlay-button:hover {
+  background-position: 0% 0%;
+  box-shadow: 0px 10px 12px -2px hsl(0, 56%, 75%);
+}
+
+.error-text {
+  margin: 0.5rem 1.5rem;
+  display: block;
+  font-size: 1rem;
+  color: hsl(0, 93%, 68%);
+  position: absolute;
+}
+
+.hero-content {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-heading {
+  margin-bottom: 1.5rem;
+}
+
+.hero-greeting {
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 43ch;
+}
+
+header {
+  padding: 2rem;
+}
+
+.header-logo {
+  height: 1.5rem;
+}
+
+.hero-image {
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.lg-hero-image-container {
+  display: none;
+}
+
+@media screen and (min-width: 811px) {
+  form {
+    align-self: stretch;
+  }
+
+  header {
+    padding: 4rem 3rem;
+  }
+  .header-logo {
+    height: 2rem;
+  }
+
+  .visible-lg {
+    display: block;
+    margin-bottom: 9rem;
+  }
+
+  .first-col {
+    background: url("./images/bg-pattern-desktop.svg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 3 0 0;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 10rem 1fr;
+    align-items: center;
+  }
+
+  .lg-hero-image-container {
+    display: block;
+    flex: 2 0 0;
+    position: relative;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    min-height: 42.5rem;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0rem 3rem 10rem 3rem;
+  }
+
+  .hero-image-container {
+    display: none;
+  }
+
+  .hero-image {
+    height: 100%;
+    width: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-heading {
+    text-align: start;
+  }
+
+  .hero-greeting {
+    text-align: start;
+  }
+}
