@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
-    >
+    />
 
     <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
-    >
-    <link rel="stylesheet" type="text/css" href="./styles.css" >
+    />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
   </head>
   <body>
     <main class="hero">
@@ -28,10 +28,11 @@
             class="header-logo"
             src="./images/logo.svg"
             alt="Base Apparel logo"
-          >
+            aria-hidden="true"
+          />
         </header>
         <div class="hero-image-container">
-            <img class="hero-image" src="./images/hero-mobile.jpg" alt="" >
+          <img class="hero-image" src="./images/hero-mobile.jpg" alt="" />
         </div>
         <div class="hero-content">
           <h1 class="hero-heading">
@@ -53,7 +54,7 @@
                 placeholder="Email Address"
                 required
                 type="email"
-              >
+              />
               <button class="overlay-button" name="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
                   <path
@@ -61,8 +62,7 @@
                     stroke="#FFF"
                     stroke-width="2"
                     d="M1 1l8.836 8.836L1 18.671"
-                  >
-                  </path>
+                  ></path>
                 </svg>
                 <span class="hidden"> Submit </span>
               </button>
@@ -71,24 +71,27 @@
                 class="input-error-icon hidden"
                 src="./images/icon-error.svg"
                 alt=""
-              >
+              />
             </div>
-            <div id="error-span" aria-live="polite"></div>
+            <p id="error-span" aria-live="polite"></p>
           </form>
         </div>
       </div>
       <div class="lg-hero-image-container">
-          <img class="hero-image" src="./images/hero-desktop.jpg" alt="" >
+        <img class="hero-image" src="./images/hero-desktop.jpg" alt="" />
       </div>
     </main>
     <footer class="attribution">
       <span>
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener"
           >Frontend Mentor</a
         >.
       </span>
-      <span> Coded by <a href="#">Your Name Here</a>. </span>
+      <span> Coded by <a href="https://prajot.dev">Prajot Surey</a>. </span>
     </footer>
 
     <script src="./script.js"></script>
